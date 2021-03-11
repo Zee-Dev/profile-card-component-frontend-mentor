@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    /* ### Primary  */
+
+    --bg-color: hsl(185, 75%, 39%);
+    --dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* ### Neutral */
+    --Dark-gray: hsl(0, 0%, 59%);
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--Dark-gray);
+    font-size: 1.1rem;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    color: var(--dark-desaturated-blue);
+}
+
+
+/* bg-pattern-top */
+.pattern-top {
+    position: absolute;
+    bottom: 20em;
+    right: 52em;
+
+}
+
+/* bg-pattern-bottom */
+.pattern-bottom {
+    position: fixed;
+    left: 52em;
+    top: 20em;
+
+
+}
+
+/* Main-Section */
+.main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100vh;
+    border-radius: 10px;
+
+}
+
+/* Pattern-card */
+.pattern-card {
+    border-radius: 20px 20px 0 0;
+
+}
+
+
+/* Profile */
+.victor {
+    border-radius: 100%;
+    border: 5px solid #fff;
+    position: relative;
+    bottom: 2.5em;
+    margin-bottom: 0;
+    width: 30%;
+    /* margin: auto; */
+
+}
+
+.profile {
+    box-shadow: 0px 0px 10px -4px #fff;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+
+}
+
+.profile-details {
+    margin-bottom: 3em;
+
+}
+
+.age {
+    font-weight: 400;
+    color: var(--Dark-gray);
+}
+
+/* Stats-Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--Dark-grayish-blue);
+    padding: 2em;
+}
+
+.stats-text,
+.location {
+    margin-top: 0.7em;
+
+}
+
+/* Attribution */
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+
+}
+
+.attribution a {
+    color: white;
+}
+
+
+/* For Screen less than 900px */
+
+@media(max-width: 900px) {
+
+    body {
+        font-size: 11px;
+        background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 130% 150%, -25% -70%;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .main {
+        width: 85%;
+    }
+
+    .pattern-top,
+    .pattern-bottom {
+        display: none;
+
+    }
+}
+
+
+
+/* For Screens between 600px and 1000px */
+@media(min-width: 600px) and (max-width: 1000px) {
+    body {
+        background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 200% -50%, -150% 150%;
+    }
+
+    .victor {
+        bottom: 5em;
+    }
+
+    .pattern-top,
+    .pattern-bottom {
+        display: none;
+
+    }
+}
